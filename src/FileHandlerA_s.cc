@@ -30,7 +30,7 @@
 #include <cstdlib>
 
 #include "./FileHandlerA.hh"
-#include "./file.hh"
+#include "./file_s.hh"
 using namespace std;
 
 FileHandlerA::FileHandlerA(const char* filename,const int& _nbCPU, const size_t& _maxNbReads):FileHandler(filename,_nbCPU,_maxNbReads)

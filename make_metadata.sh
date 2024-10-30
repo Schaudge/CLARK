@@ -17,7 +17,8 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
+#
 #   make_metadata.sh: To create meta-data for the selected database (Bacteria,
 # 		      Viruses, Human or Custom). 
 #
@@ -101,7 +102,7 @@ if [ ! -s $DBDR/.$DB ]; then
 	fi
 fi
 
-if [ ! -f $LDIR/exe/getfilesToTaxNodes ] || [ ! -f $LDIR/exe/getAccssnTaxID ]; then
+if [ ! -f $LDIR/bin/getfilesToTaxNodes ] || [ ! -f $LDIR/bin/getAccssnTaxID ]; then
 	echo "Something wrong occurred (source code may be missing or unusable. Did the installation finish properly?). The program must abort."
 	exit
 fi
@@ -128,11 +129,11 @@ fi
 
 if [ ! -s $DBDR/.$DB.fileToAccssnTaxID ] ; then
 	echo "Re-building $DB.fileToAccssnTaxID"
-	$LDIR/exe/getAccssnTaxID $DBDR/.$DB $DBDR/$TAXDR/nucl_accss $DBDR/$TAXDR/merged.dmp > $DBDR/.$DB.fileToAccssnTaxID
+	$LDIR/bin/getAccssnTaxID $DBDR/.$DB $DBDR/$TAXDR/nucl_accss $DBDR/$TAXDR/merged.dmp > $DBDR/.$DB.fileToAccssnTaxID
 fi
 if [ ! -s $DBDR/.$DB.fileToTaxIDs ]; then
 	echo "$DB: Retrieving taxonomy nodes for each sequence based on taxon ID..."
-	$LDIR/exe/getfilesToTaxNodes $DBDR/$TAXDR/nodes.dmp $DBDR/.$DB.fileToAccssnTaxID > $DBDR/.$DB.fileToTaxIDs
+	$LDIR/bin/getfilesToTaxNodes $DBDR/$TAXDR/nodes.dmp $DBDR/.$DB.fileToAccssnTaxID > $DBDR/.$DB.fileToTaxIDs
 fi
 exit
 

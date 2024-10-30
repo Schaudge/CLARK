@@ -33,7 +33,7 @@
 #include<stdio.h>
 #include<stdint.h>
 #include<vector>
-#include "./dataType.hh"
+#include "./dataType_s.hh"
 
 void getElementsFromLine(char*& line, const size_t& len, const int _maxElement, std::vector< std::string >& _elements);
 

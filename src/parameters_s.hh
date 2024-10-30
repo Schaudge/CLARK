@@ -1,4 +1,4 @@
-/*  
+/*
  * CLARK, CLAssifier based on Reduced K-mers.
  */
 
@@ -26,26 +26,25 @@
  *
  */
 
-#ifndef FILEHANDLER_A_HH
-#define FILEHANDLER_A_HH
 
-#include <vector>
-#include <stdint.h>
-#include <string>
+#ifndef PARAMETERS_HH
+#define PARAMETERS_HH
 
-#include "./FileHandler.hh"
+#define VERSION "1.3.0.0"
 
-class FileHandlerA: public FileHandler 
-{
-	public:
-	FileHandlerA(const char* filename,const int& _nbCPU, const size_t& _maxNbReads = MAXRDBF);
-	~FileHandlerA();
+#define SB              4       
+#define DBCTRESH	8
+#define LHTSIZE 	57777779
+#define HTSIZE  	1610612741
+#define NBN		4
+#define SFACTORMAX 	30
+#define MAXTS		65535
+#define MAXTSSM		16383
+#define WEIGHT		22
+#define LENGTH          31
 
-	bool 	Open();
-	bool 	GetRead(const int& i_cpu, std::string& out, std::string& id);
-	bool 	GetRead(const int& i_cpu, uint8_t* out, uint32_t& size, std::string& id);
-	private:
-	bool    SetPositions();
-};
+typedef uint64_t      T64;
+typedef uint32_t      T32;
+typedef uint16_t      T16;
 
 #endif

@@ -16,11 +16,11 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-   Copyright 2013-2019, Rachid Ounit <clark.ucr.help at gmail.com>
- */
+   Copyright @The Regents of the University of California. All rights reserved.
 
+*/
 /*
- * @author: Rachid Ounit, Ph.D Candidate.
+ * @author: Rachid Ounit, Ph.D.
  * @project: CLARK, Metagenomic and Genomic Sequences Classification project.
  * @note: C++ IMPLEMENTATION supported on latest Linux and Mac OS.
  *
@@ -37,6 +37,8 @@
 using namespace std;
 
 #define NBNODE 6
+#define MAXNODEITER 100
+
 struct node
 {
 	uint32_t 	parent;
@@ -50,7 +52,7 @@ void getSGFOCP(const vector<node>& _nodes, const uint32_t& _taxid, vector<node>&
 	_line.resize(NBNODE);
 	size_t cpt = 0;
 	size_t it = _taxid, tmp;
-	while (true)
+	while (cpt < MAXNODEITER)
 	{
 		if (it == 1 || _nodes[it].parent == 1)
 			break;
@@ -58,10 +60,10 @@ void getSGFOCP(const vector<node>& _nodes, const uint32_t& _taxid, vector<node>&
 		{
 			_line[ _nodes[it].rank ].rank = 0;
 			_line[ _nodes[it].rank ].parent = it;
-			cpt++;
 		}
 		tmp = it;
 		it = _nodes[tmp].parent;
+		cpt++;
 	}
 }
 

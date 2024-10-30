@@ -17,7 +17,9 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#    Copyright @ The Regents of the University of California. All rights reserved.
+#
+
 #   classify_metagenome.sh: To classifiy a metagenomic sample against one
 #			   or several databases from the list:
 #			   bacteria, viruses, human and custom.
@@ -169,11 +171,11 @@ exit
 fi
 
 if [ "$VARIANT" = "LIGHT" ]; then
-$LDIR/exe/CLARK-l $PARAMS
+$LDIR/bin/CLARK-l $PARAMS
 elif  [ "$VARIANT" = "SPACED" ]; then
-$LDIR/exe/CLARK-S $PARAMS
+$LDIR/bin/CLARK-S $PARAMS
 else
-$LDIR/exe/CLARK $PARAMS
+$LDIR/bin/CLARK $PARAMS
 fi
 
 if [ "$UNRQTD" = "--gzipped" ]; then

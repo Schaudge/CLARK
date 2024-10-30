@@ -16,11 +16,11 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-   Copyright 2013-2019, Rachid Ounit <clark.ucr.help at gmail.com>
- */
+   Copyright @The Regents of the University of California. All rights reserved.
 
+*/
 /*
- * @author: Rachid Ounit, Ph.D Candidate.
+ * @author: Rachid Ounit, Ph.D.
  * @project: CLARK, Metagenomic and Genomic Sequences Classification project.
  * @note: C++ IMPLEMENTATION supported on latest Linux and Mac OS.
  *
@@ -117,7 +117,7 @@ class EHashtable: public Hashtable
 			);
 		bool addElement(const std::string& 		_kmer);
 
-		bool clear();
+		void clear();
 
 		bool getTargetID(const std::string&		_label,
 			ILBL&					_id
@@ -499,7 +499,7 @@ EHashtable<HKMERr, ELMTr>::~EHashtable()
 }
 
 	template <typename HKMERr, typename ELMTr>
-bool EHashtable<HKMERr, ELMTr>::clear()
+void EHashtable<HKMERr, ELMTr>::clear()
 {
 	m_localIndex = 0;
 	m_kmerSize = 0;

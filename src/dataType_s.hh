@@ -32,7 +32,7 @@
 #include <stdint.h>
 #include <cstdlib>
 #include <string>
-#include "./parameters.hh"
+#include "./parameters_s.hh"
 
 typedef uint32_t        ITYPE;
 typedef uint8_t        	IOCCR;

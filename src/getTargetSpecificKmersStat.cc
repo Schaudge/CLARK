@@ -19,11 +19,11 @@
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- *  Copyright 2013-2019, Rachid Ounit <clark.ucr.help at gmail.com>
+ *  Copyright @The Regents of the University of California. All rights reserved.
+ *
  */
-
 /*
- *  * @author: Rachid Ounit, Ph.D Candidate.
+ *  * @author: Rachid Ounit, Ph.D.
  *  * @project: CLARK, Metagenomic and Genomic Sequences Classification project.
  *  * @note: C++ IMPLEMENTATION supported on latest Linux and Mac OS.
  *  *

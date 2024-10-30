@@ -17,7 +17,8 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
+#
 #   set_targets.sh: To create targets definition of selected databases
 #            (Bacteria, Viruses, Plasmid, Protozoa, Fungi Human and Custom).
 
@@ -99,7 +100,7 @@ do
 			fi
 			echo "done."
 			if [ -s $DBDR/.$db.fileToTaxIDs ]; then 
-				$LDIR/exe/getTargetsDef $DBDR/.$db.fileToTaxIDs $RANK >> $DBDR/targets.txt 
+				$LDIR/bin/getTargetsDef $DBDR/.$db.fileToTaxIDs $RANK >> $DBDR/targets.txt 
 				subDB="$subDB$db$us"
 				if [ -f $LDIR/files_excluded.txt ]; then
 					cat $LDIR/files_excluded.txt >> $DBDR/.tmp

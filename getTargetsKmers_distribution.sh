@@ -17,10 +17,11 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
 #
 #
-#  @author: Rachid Ounit, Ph.D Candidate.
+#
+#  @author: Rachid Ounit, Ph.D.
 #  @project: CLARK, Metagenomic and Genomic Sequences Classification project.
 #  @note: C++/Shell IMPLEMENTATION supported on latest Linux and Mac OS.
 #  getTargetsKmers_distribution.sh: To estimate abundance of target identified (reported
@@ -36,5 +37,5 @@ if [ $# -lt 2 ]; then
 echo "Usage: $0 <k-mer length: integer between 2 and 32> <min k-mers frequency: default is 0>"
 exit
 fi
-$LDIR/exe/getTargetSpecificKmersStat $LDIR/.settings $@
+$LDIR/bin/getTargetSpecificKmersStat $LDIR/.settings $@
 

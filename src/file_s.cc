@@ -34,7 +34,7 @@
 #include <iostream>
 using namespace std;
 
-#include "./file.hh"
+#include "./file_s.hh"
 
 void getElementsFromLine(char*& line, const size_t& len, const int _maxElement, std::vector< std::string >& _elements)
 {

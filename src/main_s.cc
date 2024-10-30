@@ -30,10 +30,8 @@
 #include<cstdlib>
 #include<stdio.h>
 #include<cmath>
-#include<fstream>
 
-#include "./CLARK_hh.hh"
-#include "./parameters.hh"
+#include "./CLARK_s.hh"
 #define MAXK 32
 
 using namespace std;

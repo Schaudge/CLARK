@@ -16,7 +16,8 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019 Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
+#
 #   extractSequences: To extract sequences from the input data that mapped 
 #		      to a specified taxon.
 #
@@ -25,9 +26,9 @@ FSCRPT=$(readlink -f "$0")
 LDIR=$(dirname "$FSCRPT")
 
 if [ $# -lt 3 ]; then
-$LDIR/exe/extractSeqs
+$LDIR/bin/extractSeqs
 exit
 fi
 
-$LDIR/exe/extractSeqs $@
+$LDIR/bin/extractSeqs $@
 

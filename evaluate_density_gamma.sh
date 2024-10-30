@@ -16,7 +16,8 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019. Rachid Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
+#
 #   evaluate_GammaDensity: To evaluate and plot the density of assignments 
 #                               per Gamma score in one or several results files.
 #
@@ -31,5 +32,5 @@ echo "Results file(s) must contain Gamma scores."
 exit
 fi
 
-$LDIR/exe/getGammaDensity $@
+$LDIR/bin/getGammaDensity $@
 

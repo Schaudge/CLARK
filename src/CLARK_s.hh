@@ -33,7 +33,7 @@
 #include <vector>
 #include <iostream>
 #include <cstdlib>
-#include "./dataType.hh"
+#include "./dataType_s.hh"
 #include "./HashTableStorage_hh.hh"
 #include "./spacedKmer.hh"
 #include "./FileHandlerQ.hh"

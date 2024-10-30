@@ -17,10 +17,11 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <clark.ucr.help at gmail.com>
+#   Copyright @ The Regents of the University of California. All rights reserved.
 #
 #
-#  @author: Rachid Ounit, Ph.D Candidate.
+#
+#  @author: Rachid Ounit, Ph.D.
 #  @project: CLARK, Metagenomic and Genomic Sequences Classification project.
 #  @note: C++/Shell IMPLEMENTATION supported on latest Linux and Mac OS.
 #  makeSummaryTable.sh: To get summary tables indicating, the number of reads,
@@ -33,7 +34,7 @@ LDIR=$(dirname "$FSCRPT")
 
 if [ $# -lt 1 ]; then
 echo -n "Usage: "
-$LDIR/exe/makeSummaryTables 
+$LDIR/bin/makeSummaryTables 
 exit
 fi
-$LDIR/exe/makeSummaryTables $@
+$LDIR/bin/makeSummaryTables $@

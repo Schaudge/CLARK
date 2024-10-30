@@ -18,11 +18,11 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#   Copyright @ The Regents of the University of California. All rights reserved.
 #
-
 #
-#  @author: Rachid Ounit, Ph.D Candidate.
+#
+#  @author: Rachid Ounit, Ph.D.
 #  @project: CLARK, Metagenomic and Genomic Sequences Classification project.
 #  @note: C++/Shell IMPLEMENTATION supported on latest Linux and Mac OS.
 # 
@@ -36,22 +36,22 @@ LDIR=$(dirname "$FSCRPT")
 echo |cpp -fopenmp -dM |grep -i open > $LDIR/.tmp
 NB=`wc -l < $LDIR/.tmp`
 
-if [ ! -d $LDIR/exe/ ]; then
-	mkdir $LDIR/exe/
+if [ ! -d $LDIR/bin/ ]; then
+	mkdir $LDIR/bin/
 fi
 
-g++ -o $LDIR/exe/getTargetsDef $LDIR/src/getTargetsDef.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getAccssnTaxID $LDIR/src/getAccssnTaxID.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getfilesToTaxNodes $LDIR/src/getfilesToTaxNodes.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getAbundance $LDIR/src/getAbundance.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getConfidenceDensity $LDIR/src/getConfidencedensity.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getGammaDensity $LDIR/src/getGammadensity.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/makeSummaryTables $LDIR/src/file.cc $LDIR/src/makeSamplesSummaryTables.cc -O3
-g++ -o $LDIR/exe/converter $LDIR/src/main_spaced.cc $LDIR/src/kmersConversion.cc -O3
-g++ -o $LDIR/exe/exeSeq $LDIR/src/getSeqFiles.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/dscriptMaker $LDIR/src/dscriptMaker.cc $LDIR/src/file.cc -O3
-g++ -o $LDIR/exe/getTargetSpecificKmersStat $LDIR/src/file.cc $LDIR/src/getTargetSpecificKmersStat.cc -O3
-g++ -o $LDIR/exe/extractSeqs $LDIR/src/file.cc $LDIR/src/extractSequences.cc -O3
+g++ -o $LDIR/bin/getTargetsDef $LDIR/src/getTargetsDef.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getAccssnTaxID $LDIR/src/getAccssnTaxID.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getfilesToTaxNodes $LDIR/src/getfilesToTaxNodes.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getAbundance $LDIR/src/getAbundance.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getConfidenceDensity $LDIR/src/getConfidencedensity.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getGammaDensity $LDIR/src/getGammadensity.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/makeSummaryTables $LDIR/src/file.cc $LDIR/src/makeSamplesSummaryTables.cc -O3
+g++ -o $LDIR/bin/converter $LDIR/src/main_spaced.cc $LDIR/src/kmersConversion.cc -O3
+g++ -o $LDIR/bin/binSeq $LDIR/src/getSeqFiles.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/dscriptMaker $LDIR/src/dscriptMaker.cc $LDIR/src/file.cc -O3
+g++ -o $LDIR/bin/getTargetSpecificKmersStat $LDIR/src/file.cc $LDIR/src/getTargetSpecificKmersStat.cc -O3
+g++ -o $LDIR/bin/extractSeqs $LDIR/src/file.cc $LDIR/src/extractSequences.cc -O3
 
 rm -Rf $LDIR/.dCLARK/
 mkdir $LDIR/.dCLARK/
@@ -79,8 +79,8 @@ else
         # Building CLARK-S (Spaced version)       
         g++ -o $LDIR/.dCLARK/CLARK-S -O3 $LDIR/.dCLARK/*.cc
 fi
-mv $LDIR/.dCLARK/CLARK $LDIR/exe/
-mv $LDIR/.dCLARK/CLARK-l $LDIR/exe/
-mv $LDIR/.dCLARK/CLARK-S $LDIR/exe/
+mv $LDIR/.dCLARK/CLARK $LDIR/bin/
+mv $LDIR/.dCLARK/CLARK-l $LDIR/bin/
+mv $LDIR/.dCLARK/CLARK-S $LDIR/bin/
 
 rm -Rf $LDIR/.dCLARK $LDIR/.tmp

@@ -16,7 +16,9 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#   Copyright 2013-2019, Rachid Ounit <rouni001@cs.ucr.edu>
+#    Copyright @ The Regents of the University of California. All rights reserved.
+#
+
 #   buildSpacedDB.sh: To build databases of discriminative spaced k-mers 
 #			from the the database of discriminative 31-mers.
 #
@@ -45,7 +47,7 @@ if [ -s $DIR/T295/db_central_k31_t*_s1610612741_m0_w22.tsk.sz ]; then
 echo "Database for the first spaced seed (code name:T295) already exists."
 else
 
-$LDIR/exe/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T295
+$LDIR/bin/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T295
 if [ ! -d $DIR/T295 ]; then 
 	mkdir $DIR/T295/
 fi
@@ -56,7 +58,7 @@ fi
 if [ -s $DIR/T58570/db_central_k31_t*_s1610612741_m0_w22.tsk.sz ]; then
 echo "Database for the second spaced seed (code name:T58570) already exists."
 else
-$LDIR/exe/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T58570
+$LDIR/bin/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T58570
 if [ ! -d $DIR/T58570 ]; then
         mkdir $DIR/T58570/
 fi
@@ -66,7 +68,7 @@ fi
 if [ -s $DIR/T38570/db_central_k31_t*_s1610612741_m0_w22.tsk.sz ]; then
 echo "Database for the third spaced seed (code name:T38570) already exists."
 else
-$LDIR/exe/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T38570
+$LDIR/bin/converter $DIR/db_central_k31*m0.tsk.sz 22 31 T38570
 if [ ! -d $DIR/T38570 ]; then
         mkdir $DIR/T38570/
 fi
